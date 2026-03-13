@@ -1,7 +1,9 @@
 name: Portfolio
 on:
     push:
-        branches: [main]
+      branches: [main]
+    workflow_dispatch: 
+    
 permissions: 
     pages: write
     id-token: write
