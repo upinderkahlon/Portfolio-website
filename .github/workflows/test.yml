@@ -4,14 +4,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  greet:
+  code:
     runs-on: ubuntu-latest
     steps:
-      - name: code
+      - name: Code run
         run: echo "Code ran"
-      - name: build
-        run: echo "Code Build"
-      - name: test
-        run: echo "code tested"
-      - name: deploy
-        run: echo "code deployed"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code build
+        run: echo "Code build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code test
+        run: echo "Code tested"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code deploy
+        run: echo "Code deployed"
