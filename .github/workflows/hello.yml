@@ -1,6 +1,16 @@
 name: Hello Workflow
 on:
   workflow_dispatch: 
+    inputs:
+      environment:
+        description: This is the envirnment value where the workflow runs
+        default: dev
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 jobs:
   greet:
     runs-on: ubuntu-latest
