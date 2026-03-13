@@ -1,0 +1,17 @@
+name: Test yml code
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code
+        run: echo "Code ran"
+      - name: build
+        run: echo "Code Build"
+      - name: test
+        run: echo "code tested"
+      - name: deploy
+        run: echo "code deployed"
