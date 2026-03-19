@@ -1,6 +1,5 @@
 #Linting and SAST scan
 #Lint - flake8 & SAST - Bandit
-
 name: Code Quality
 
 on:
@@ -31,3 +30,4 @@ jobs:
 
             - name: run SAST
               run: bandit -r app.py
+              
