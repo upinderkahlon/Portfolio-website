@@ -4,7 +4,7 @@ on:
     workflow_call:
 jobs:
     deploy:
-        runs-on: ubuntu_latest
+        runs-on: ubuntu-latest
 
         steps:
             - name: SSH to prod server
@@ -15,4 +15,4 @@ jobs:
                 key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
                 script: |
                     echo "Starting Deployment"
-                    mkdir devops
+                    mkdir -p devops
