@@ -9,7 +9,7 @@ jobs:
     validate:
         runs-on: ubuntu_latest
         strategy: 
-            fail-fast: false
+            fail-fast: true
             matrix:
                 python-version: ["3.11", "3.12", "3.13"]
 
@@ -30,4 +30,3 @@ jobs:
 
             - name: run SAST
               run: bandit -r app.py
-              
